@@ -160,6 +160,8 @@ umap.png
 SocialMedia.txt
 output.wav
 tts_output.wav
+examples/voice_cloning/output/*
+!examples/voice_cloning/output/.gitkeep
 deps.json
 speakers.json
 internal/*
