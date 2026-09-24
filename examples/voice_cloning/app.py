@@ -59,4 +59,7 @@ with gr.Blocks(title="XTTS-v2 Voice Cloner") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    # show_api=False: avoids a gradio_client bug where API-schema generation
+    # for the Audio component crashes on every request, which otherwise
+    # breaks the app with "localhost is not accessible" at startup.
+    demo.launch(show_api=False)

@@ -94,9 +94,15 @@ cloner.clone(
 ### Web UI (Gradio)
 
 ```bash
-pip install gradio
+pip install "gradio==4.44.1" "huggingface-hub>=0.23.2,<1.0"
 python examples/voice_cloning/app.py
 ```
+
+Note: plain `pip install gradio` pulls the latest Gradio, which requires
+`huggingface-hub>=1.16`. That conflicts with `transformers==4.42.4` above
+(which needs `huggingface-hub<1.0` for XTTS's generation code) and breaks
+cloning with `ImportError: huggingface-hub>=0.23.2,<1.0 is required...`.
+Pin Gradio to `4.44.1` (or another 4.x release) to stay compatible.
 
 Then open http://127.0.0.1:7860 to upload a reference clip, type text, pick
 a language, and generate/play the cloned audio in the browser.
