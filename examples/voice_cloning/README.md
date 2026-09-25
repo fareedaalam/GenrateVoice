@@ -119,13 +119,20 @@ pre-configured multi-speaker models), so this Gradio app is provided instead.
 
 ## Supported languages
 
-| Code | Language | Code | Language | Code | Language |
-|------|----------|------|----------|------|----------|
-| en | English | pl | Polish | ko | Korean |
-| es | Spanish | tr | Turkish | ja | Japanese |
-| fr | French | ru | Russian | hi | Hindi |
-| de | German | nl | Dutch | | |
-| it | Italian | cs | Czech | | |
-| pt | Portuguese | ar | Arabic | | |
-| | | zh-cn | Chinese | | |
-| | | hu | Hungarian | | |
+| Code | Language   | Code  | Language  | Code | Language |
+| ---- | ---------- | ----- | --------- | ---- | -------- |
+| en   | English    | pl    | Polish    | ko   | Korean   |
+| es   | Spanish    | tr    | Turkish   | ja   | Japanese |
+| fr   | French     | ru    | Russian   | hi   | Hindi    |
+| de   | German     | nl    | Dutch     |      |          |
+| it   | Italian    | cs    | Czech     |      |          |
+| pt   | Portuguese | ar    | Arabic    |      |          |
+|      |            | zh-cn | Chinese   |      |          |
+|      |            | hu    | Hungarian |      |          |
+
+# cli command to run app
+
+```bash
+source .venv/bin/activate
+python examples/voice_cloning/app.py
+```
