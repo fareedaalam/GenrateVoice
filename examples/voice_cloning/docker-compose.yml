@@ -1,0 +1,18 @@
+services:
+  voice-cloner:
+    build:
+      context: ../..
+      dockerfile: examples/voice_cloning/Dockerfile
+    ports:
+      - "7860:7860"
+    environment:
+      - COQUI_TOS_AGREED=1
+      - TTS_HOME=/data/tts
+      - GRADIO_SERVER_NAME=0.0.0.0
+      - GRADIO_SERVER_PORT=7860
+    volumes:
+      - tts-models:/data/tts
+    restart: unless-stopped
+
+volumes:
+  tts-models:

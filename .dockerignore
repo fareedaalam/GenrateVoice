@@ -7,3 +7,6 @@ tests/outputs/*
 tests/train_outputs/*
 __pycache__/
 *.pyc
+.venv/
+examples/voice_cloning/output/*.wav
+.claude/
